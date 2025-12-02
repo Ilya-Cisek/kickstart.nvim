@@ -13,6 +13,7 @@ vim.g.have_nerd_font = false
 --  For more options, you can see `:help option-list`
 
 -- Make line numbers default
+
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
@@ -79,6 +80,9 @@ vim.o.scrolloff = 15
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+
+-- no comment on new line
+vim.cmd [[autocmd FileType * set formatoptions-=ro]]
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
