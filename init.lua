@@ -50,3 +50,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- Load plugin manager and plugins
 require 'config.lazy'
+
+-- default theme as a backup, `recall()` can return `nil`.
+local theme = require('last-color').recall() or 'default'
+vim.cmd.colorscheme(theme)
+
